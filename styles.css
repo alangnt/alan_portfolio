@@ -1,0 +1,350 @@
+/*Every CSS properties for the Body - INDEX, PROJECTS, ABOUT, CONTACT*/
+body {
+    display: flex;
+    flex-direction: column; /*Makes the children be from top to bottom*/
+    font-family: Arial, Helvetica, sans-serif; /*Changes the font*/
+    min-height: 100vh; /*Makes the page's height at least as long as the screen*/
+    margin: 0;
+    background-color: #F5F5DC;
+}
+
+
+/*Every CSS properties for the Header - INDEX, PROJECTS, ABOUT, CONTACT*/
+header nav {
+    margin: 10px 20px;
+}
+
+header nav ul {
+    display: flex;
+    text-align: center; /*Aligns the list in the Y-axis*/
+    justify-content: center; /*Aligns the list in the X-axis*/
+    padding: 0;
+    margin: 0;
+    list-style: none; /*Removes the bullets*/
+}
+
+header nav ul li {
+    margin: 0 15px; /*Adds some space between the menus*/
+}
+
+header a {
+    font-size: 1.5vw;
+}
+
+.header_menu { /*Equals header nav ul li a*/
+    text-decoration: none; /*Removes the underline*/
+}
+
+.header_menu:visited {
+    color: black; /*After visiting the link, color stays black instead of pink*/
+}
+
+.header_menu:hover { /*What happends when mouse hovers the links*/
+    text-decoration: underline;
+    padding: 5px 10px;
+}
+
+header hr {
+    border: solid 1px black;
+    margin-bottom: 0;
+}
+
+
+/*Every CSS properties for the Main - INDEX, PROJECTS, ABOUT, CONTACT*/
+main {
+    display: flex;
+    flex-grow: 1; /*Lets the main division take all the remaining place in the screen so that footer can remain in the bottom*/
+    margin-bottom: 50px;
+}
+
+
+/*Every CSS properties for ther Footer - INDEX, PROJECTS, ABOUT, CONTACT*/
+footer {
+    text-align: center;
+    font-size: 1vw;
+}
+
+footer hr {
+    border: solid 1px black;
+}
+
+
+
+
+
+/*Every CSS properties for the Main - INDEX*/
+.main_index {
+    justify-content: center; /*Aligns the children in the X-axis*/
+    align-items: center; /*Aligns the list in the Y-axis*/
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /*Border*/
+    border: solid 0.7vw black;
+    padding: 0px 50px; /*Removes the padding TOP and BOTTOM and adds LEFT and RIGHT*/
+}
+
+#hero h1 {
+    font-size: 6vw; /*Adjusts the size of h1 according to screen size*/
+}
+
+#hero a {
+    font-size: 3vw; /*Adjusts the size of p according to screen size*/
+    text-decoration: none;
+    padding: 10px;
+}
+
+#hero a:visited {
+    color: black; /*After visiting the link, color stays black instead of pink*/
+}
+
+#hero a:hover { /*What happends when mouse hovers the links*/
+    text-decoration: underline;
+}
+
+
+
+
+
+/*Every CSS properties for the Main - ABOUT*/
+.main_about {
+    flex-direction: column;
+}
+
+.header_resume { /*Set up the display of the header of the resume*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 20vh;
+    margin: 20px 0;
+}
+
+.header_resume_div1 { /*Set up the display of the first div in the header of the resume*/
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 10px;
+}
+
+#header_resume_div1_img { /*Set up the display of the image in the first div in the header of the resume*/
+    height: 70%;
+    border-radius: 100%;
+}
+
+.header_resume_div2 { /*Set up the display of the second div in the header of the resume*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    width: 30vw;
+}
+
+.header_resume_div2 h1 {
+    font-size: 2vw;
+    margin: 0;
+}
+
+.header_resume_div2 h2 {
+    font-size: 1.5vw;
+    margin: 0;
+}
+
+.header_resume_div2 p {
+    font-size: 1vw;
+    margin: 0;
+}
+
+.main_resume { /*Set up the display of the main of the resume*/
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main_resume_section { /*Set up the display for both the left and right parts*/
+    display: flex;
+    flex-direction: column;
+    border: solid 2px black;
+    width: 40%;
+    padding: 20px;
+    /*Display*/
+    background-color: #FFF8E7;
+    border-radius: 25px;
+    box-shadow: 2px 2px 5px black;
+}
+
+.main_resume_section h3 {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    border-bottom: solid 2px black;
+    font-size: 1.5vw;
+}
+
+.main_resume_section article {
+    margin-bottom: 25px;
+}
+
+.main_resume_section p, .main_resume_section h4 {
+    margin: 5px;
+}
+
+.main_resume_section h4 {
+    font-size: 1.3vw;
+}
+
+.main_resume_section p {
+    font-size: 1vw;
+}
+
+.main_resume_section li {
+    margin-bottom: 10px;
+    font-size: 1vw;
+}
+
+
+
+
+/*Every CSS properties for the Main - CONTACT*/
+.contact h1, .contact p {
+    padding-left: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contact form label {
+    margin: 10px 0 5px;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact form input[type="submit"] {
+    width: auto;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.contact form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+
+
+
+
+/*All the RESPONSIVE DESIGN*/
+@media screen and (max-width: 768px) {
+    header a {
+        font-size: 2vw;
+    }
+
+    .header_resume {
+        justify-content: center;
+    }
+
+    .header_resume h1 {
+        font-size: 3vw;
+    }
+
+    .header_resume h2 {
+        font-size: 2vw;
+    }
+
+    .header_resume p {
+        font-size: 1.5vw;
+    }
+
+    .main_resume {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main_resume_section {
+        width: 60vw;
+        margin-bottom: 2vh;
+    }
+
+    .main_resume_section h3 {
+        font-size: 2.5vw;
+    }
+
+    .main_resume_section h4 {
+        font-size: 1.8vw;
+    }
+    
+    .main_resume_section p {
+        font-size: 1.5vw;
+    }
+    
+    .main_resume_section li {
+        font-size: 1.5vw;
+    }
+
+    footer {
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    header a {
+        font-size: 2.5vw;
+    }
+
+    .header_resume h1 {
+        font-size: 4vw;
+    }
+
+    .header_resume h2 {
+        font-size: 3vw;
+    }
+
+    .header_resume p {
+        font-size: 2.5vw;
+    }
+    
+    #header_resume_div1_img {
+        height: 60%;
+    }
+
+    .header_resume_div2 {
+        width: 45vw;
+    }
+
+    .main_resume_section h3 {
+        font-size: 3vw;
+    }
+
+    .main_resume_section h4 {
+        font-size: 2.3vw;
+    }
+    
+    .main_resume_section p {
+        font-size: 2vw;
+    }
+    
+    .main_resume_section li {
+        font-size: 2vw;
+    }
+
+    footer {
+        font-size: 2vw;
+    }
+}
