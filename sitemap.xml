@@ -10,12 +10,37 @@
         <priority>0.80</priority>
     </url>
     <url>
+        <loc>https://alangeirnaert.com/projects_fr.html</loc>
+        <lastmod>2024-06-05T19:40:48+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
         <loc>https://alangeirnaert.com/about_fr.html</loc>
         <lastmod>2024-06-05T19:40:57+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://alangeirnaert.com/contact_fr.html</loc>
+        <lastmod>2024-06-05T19:40:48+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://alangeirnaert.com/index_en.html</loc>
+        <lastmod>2024-06-05T19:40:22+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://alangeirnaert.com/projects_en.html</loc>
+        <lastmod>2024-06-05T19:40:48+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://alangeirnaert.com/about_en.html</loc>
+        <lastmod>2024-06-05T19:40:57+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://alangeirnaert.com/contact_en.html</loc>
         <lastmod>2024-06-05T19:40:48+00:00</lastmod>
         <priority>0.80</priority>
     </url>

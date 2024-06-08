@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 /*Every CSS properties for the Body - INDEX, PROJECTS, ABOUT, CONTACT*/
 body {
     display: flex;
@@ -6,12 +10,18 @@ body {
     min-height: 100vh; /*Makes the page's height at least as long as the screen*/
     margin: 0;
     background-color: #F5F5DC;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 
 /*Every CSS properties for the Header - INDEX, PROJECTS, ABOUT, CONTACT*/
-header nav {
-    margin: 10px 20px;
+header {
+    border-bottom: solid 2px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
 }
 
 header nav ul {
@@ -29,24 +39,83 @@ header nav ul li {
 
 header a {
     font-size: 1.5vw;
-}
-
-.header_menu { /*Equals header nav ul li a*/
+    color: black;
     text-decoration: none; /*Removes the underline*/
 }
 
-.header_menu:visited {
+.header_menu { /*Equals header nav ul li a*/
+    transition: font-size 0.5s; /*Changes font-size when hovering*/
+}
+
+header a:visited {
     color: black; /*After visiting the link, color stays black instead of pink*/
 }
 
 .header_menu:hover { /*What happends when mouse hovers the links*/
     text-decoration: underline;
     padding: 5px 10px;
+    font-size: 1.6vw;
 }
 
 header hr {
     border: solid 1px black;
     margin-bottom: 0;
+}
+
+.dropdown_mobile, .dropdown_desktop {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+
+.dropbtn {
+    cursor: pointer;
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 1vw;
+}
+
+.btn_mobile {
+    color: black;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+.dropdown_content {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    background-color: white;
+    box-shadow: 2px 2px 5px black;
+    z-index: 1;
+    padding: 5px 0;
+    margin: 0 1vw;
+    right: 0;
+}
+
+.dropdown_content a {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.dropdown_content a:visited {
+    color: black;
+}
+
+.dropdown_content a:hover {
+    text-decoration: underline;
+}
+  
+.dropdown_mobile:hover .dropdown_content, .dropdown_desktop:hover .dropdown_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dropdown_mobile {
+    display: none;
 }
 
 
@@ -62,12 +131,8 @@ main {
 footer {
     text-align: center;
     font-size: 1vw;
+    border-top: solid 2px black;
 }
-
-footer hr {
-    border: solid 1px black;
-}
-
 
 
 
@@ -82,9 +147,9 @@ footer hr {
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 80vw;
     /*Border*/
     border: solid 0.7vw black;
-    padding: 0px 50px; /*Removes the padding TOP and BOTTOM and adds LEFT and RIGHT*/
 }
 
 #hero h1 {
@@ -103,6 +168,84 @@ footer hr {
 
 #hero a:hover { /*What happends when mouse hovers the links*/
     text-decoration: underline;
+}
+
+
+
+
+
+/*Every CSS properties for the Main - PROJECTS*/
+.projects {
+    flex-direction: column;
+    margin: 0 2vw;
+}
+
+.projects h1 {
+    margin-bottom: 0;
+}
+
+.project_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2vh 0;
+}
+
+.project_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px black;
+    margin: 0 3vw ;
+    width: 16vw;
+    overflow: hidden;
+    transition: transform 0.2s;
+    height: 60vh;
+}
+
+.project_item:hover {
+    transform: translateY(-10px);
+}
+
+.project_thumbnail {
+    height: 40%;
+}
+
+.project_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
+    padding: 1vw;
+}
+
+.project_details h2 {
+    font-size: 1.4vw;
+    margin: 0;
+}
+
+.project_details p {
+    font-size: 1vw;
+    flex-grow: 1;
+}
+
+.project_link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-size: 1vw;
+}
+
+.project_link:hover {
+    background-color: #C49E78 ;
+    color: black;
 }
 
 
@@ -251,11 +394,69 @@ footer hr {
 
 
 /*All the RESPONSIVE DESIGN*/
-@media screen and (max-width: 768px) {
-    header a {
+@media (max-width: 1280px) {
+    .project_item {
+        width: 18vw;
+    }
+
+    .project_details h2 {
+        font-size: 1.4vw;
+    }
+
+    .project_details p, .project_link {
+        font-size: 1.1vw;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .project_item {
+        width: 22vw;
+    }
+
+    .project_details h2 {
+        font-size: 1.8vw;
+    }
+
+    .project_details p, .project_link {
+        font-size: 1.4vw;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .dropdown_menu {
+        font-size: 1vw;
+    }
+}
+
+
+@media (max-width: 768px) {
+    /*Responsive Design for HEADER*/
+    .header_menu {
         font-size: 2vw;
     }
 
+    .dropdown_content, .dropbtn {
+        font-size: 1.5vw;
+    }
+
+
+    /*Responsive Design for PROJECTS*/
+    .project_item {
+        width: 30vw;
+    }
+
+    .project_details h2 {
+        font-size: 2.2vw;
+    }
+
+    .project_details p, .project_link {
+        font-size: 1.8vw;
+    }
+
+
+    /*Responsive Design for ABOUT*/
     .header_resume {
         justify-content: center;
     }
@@ -298,16 +499,87 @@ footer hr {
         font-size: 1.5vw;
     }
 
+
+    /*Responsive Design for FOOTER*/
     footer {
         font-size: 1.5vw;
     }
 }
 
-@media screen and (max-width: 425px) {
-    header a {
+@media (min-width: 426px) {
+    /*Responsive Design for HEADER*/
+    .dropdown_desktop {
+        display: inline-block;
+    }
+
+    .dropdown_mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+    /*Responsive Design for HEADER*/
+    .header_menu {
         font-size: 2.5vw;
     }
 
+    .dropdown_desktop {
+        display: none;
+    }
+
+    .dropdown_mobile {
+        display: inline-block;
+        font-size: 2vw;
+    }
+
+    .dropdown_menu {
+        font-size: 2vw;
+    }
+
+    .dropdown_content {
+        right: 0;
+        margin-right: 1vw;
+    }
+
+
+    /*Responsive Design for INDEX*/
+    #hero h1 {
+        font-size: 7vw;
+    }
+
+    #hero a {
+        font-size: 4vw;
+    }
+
+
+    /*Responsive Design for PROJECTS*/
+    .projects {
+        margin: 0 3vw;
+    }
+
+    .projects h1, #projects_p {
+        text-align: center;
+    }
+
+    .project_item {
+        width: 50vw;
+        margin-bottom: 10vw;
+    }
+
+    .project_details {
+        padding: 2vw;
+    }
+
+    .project_details h2 {
+        font-size: 4.5vw;
+    }
+
+    .project_details p, .project_link {
+        font-size: 3vw;
+    }
+
+
+    /*Responsive Design for ABOUT*/
     .header_resume h1 {
         font-size: 4vw;
     }
@@ -344,7 +616,25 @@ footer hr {
         font-size: 2vw;
     }
 
+
+    /*Responsive Design for FOOTER*/
     footer {
         font-size: 2vw;
+    }
+}
+
+@media (max-width: 384px) {
+    .header_menu {
+        font-size: 2.4vw;
+    }
+
+    .project_item {
+        width: 55vw;
+    }
+}
+
+@media (max-width: 363px) {
+    .header_menu {
+        font-size: 2.2vw;
     }
 }
